@@ -1,4 +1,3 @@
-import Footer from "../components/Footer.component";
 import Navbar from "../components/Navbar.components";
 import AboutSection from "../sections/About.section";
 import ContactSection from "../sections/Contact.section";
@@ -10,10 +9,10 @@ export const HomePage = () => {
     <>
       <Navbar />
       <HeroSection />
+      {/* <ExperienceEducationSection /> */}
       <AboutSection />
       <ProjectSection />
       <ContactSection />
-      <Footer />
     </>
   );
 };

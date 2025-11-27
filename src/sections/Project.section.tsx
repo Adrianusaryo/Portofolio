@@ -17,7 +17,7 @@ const ProjectSection = () => {
             className="col-span-12 mx-auto  mb-10 md:col-span-6 lg:col-span-4"
             key={index}
           >
-            <div className="card lg:w-[350px] w-[330px]  h-full bg-slate-800 border-2 border-slate-700 ">
+            <div className="card lg:w-[350px] w-[330px]  h-full border-2 border-slate-500 ">
               <figure className="mx-4 mt-4">
                 <img
                   src={items.image}

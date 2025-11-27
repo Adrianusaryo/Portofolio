@@ -1,16 +1,60 @@
 import Section from "../components/Section.component";
 import { CONTACTFIELDS } from "../constants/contactFields";
+import { SOCIAL_LINKS } from "../constants/socialLinks";
 
 const ContactSection = () => {
   return (
     <Section>
-      <h2 className="text-xl font-extrabold py-4 text-left">Kontak Saya</h2>
-      <p className="max-w-lg mb-8 text-left  font-medium text-sm text-gray-300">
-        Silakan tinggalkan pesan melalui formulir di bawah ini untuk keperluan
-        kerja sama atau pertanyaan lainnya.
-      </p>
-      <div className="flex lg:justify-center gap-10 flex-col lg:flex-row ">
-        <div className=" w-full max-w-md  mx-2  backdrop:blur-xl rounded-2xl shadow p-10 border-slate-500 border-2">
+      <div className="flex flex-col lg:flex-row items-center justify-center mt-16 gap-10">
+        {/* LEFT CONTENT */}
+        <div className="w-full max-w-lg space-y-4">
+          <h2 className="text-4xl font-semibold text-white leading-snug">
+            Jadwalkan Pertemuan untuk Membahas Kebutuhan Anda
+          </h2>
+
+          <p className="text-gray-300 text-sm max-w-md font-medium mb-8">
+            Hubungi saya hari ini untuk mendiskusikan bagaimana saya dapat
+            membantu Anda mencapai tujuan serta memberikan solusi yang sesuai
+            dengan kebutuhan Anda.
+          </p>
+
+          {/* Contact Info */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-3">
+              <i className="fa-solid fa-mobile-screen  text-xl"></i>
+              <span className="text-gray-200 text-sm">081281683694</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <i className="fa-solid fa-paper-plane  text-xl"></i>
+              <span className="text-gray-200 text-sm">
+                adrianusaryo710@gmail.com
+              </span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <i className="fa-solid fa-thumbtack  text-xl"></i>
+              <span className="text-gray-200 text-sm">Jakarta, Indonesias</span>
+            </div>
+          </div>
+
+          {/* Social Media */}
+          <div className="flex gap-4 pt-2">
+            {SOCIAL_LINKS.map((item, index) => (
+              <a
+                href={item.path}
+                key={index}
+                target="_blank"
+                className="w-10 h-10 rounded-full bg-gray-700 hover:bg-gray-600 flex items-center justify-center text-white"
+              >
+                <i className={item.icon}></i>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* RIGHT FORM */}
+        <div className="w-full max-w-md backdrop:blur-xl rounded-2xl shadow p-10 border-slate-500 border-2">
           <form action="" className="space-y-2">
             {CONTACTFIELDS.map((item, index) => (
               <fieldset className="fieldset" key={index}>
@@ -24,12 +68,12 @@ const ContactSection = () => {
                     placeholder={item.placeholder}
                     rows={item.rows || 4}
                     className="
-            w-full px-4 py-3 rounded-lg
-            bg-gray-800/60 border-2 border-slate-500
-            text-gray-200 placeholder-gray-400
-            focus:outline-none focus:ring-2 focus:ring-slate-500 
-            focus:border-slate-500 transition
-          "
+                w-full px-4 py-3 rounded-lg
+                bg-gray-800/60 border-2 border-slate-500
+                text-gray-200 placeholder-gray-400
+                focus:outline-none focus:ring-2 focus:ring-slate-500 
+                focus:border-slate-500 transition
+              "
                   ></textarea>
                 ) : (
                   <input
@@ -37,50 +81,29 @@ const ContactSection = () => {
                     id={item.id}
                     placeholder={item.placeholder}
                     className="
-             w-full px-4 py-3 rounded-lg
-            bg-gray-800/60 border-2 border-slate-500
-            text-gray-200 placeholder-gray-400
-            focus:outline-none focus:ring-2 focus:ring-slate-500 
-            focus:border-slate-500 transition
-          "
+                w-full px-4 py-3 rounded-lg
+                bg-gray-800/60 border-2 border-slate-500
+                text-gray-200 placeholder-gray-400
+                focus:outline-none focus:ring-2 focus:ring-slate-500 
+                focus:border-slate-500 transition
+              "
                   />
                 )}
               </fieldset>
             ))}
+
             <button
               type="submit"
               className="
-      w-full py-2 mt-4 rounded-lg 
-      bg-slate-600 hover:bg-slate-700 
-      text-white font-semibold text-sm 
-      transition shadow-md 
-    "
+          w-full py-2 mt-4 rounded-lg 
+          bg-slate-600 hover:bg-slate-700 
+          text-white font-semibold text-sm 
+          transition shadow-md 
+        "
             >
               Kirim Pesan
             </button>
           </form>
-        </div>
-        <div className="w-full flex items-center justify-center">
-          <div className="hover-3d mx-auto relative">
-            {/* content */}
-            <figure className="max-w-3xl rounded-2xl overflow-hidden">
-              <img
-                src="https://img.daisyui.com/images/stock/creditcard.webp"
-                alt="3D card"
-                className="rounded-2xl"
-              />
-            </figure>
-
-            {/* 8 empty divs for 3D effect */}
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
         </div>
       </div>
     </Section>

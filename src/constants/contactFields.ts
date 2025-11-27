@@ -9,21 +9,21 @@ interface ICONTACTFIELDS {
 export const CONTACTFIELDS: ICONTACTFIELDS[] = [
   {
     id: "name",
-    label: "Nama Lengkap",
+    label: "Nama Anda",
     type: "text",
-    placeholder: "",
+    placeholder: "Masukkan nama Anda...",
   },
   {
     id: "email",
     label: "Email Anda",
     type: "email",
-    placeholder: "",
+    placeholder: "Masukkan alamat email yang dapat dihubungi...",
   },
   {
     id: "message",
     label: "Pesan",
     type: "textarea",
-    placeholder: "",
+    placeholder: "Tulis pesan atau pertanyaan Anda di sini...",
     rows: 3,
   },
 ];

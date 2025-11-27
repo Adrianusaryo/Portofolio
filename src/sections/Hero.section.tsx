@@ -1,5 +1,4 @@
 import Section from "../components/Section.component";
-import { SOCIAL_LINKS } from "../constants/socialLinks";
 
 const HeroSection = () => {
   return (
@@ -20,19 +19,20 @@ const HeroSection = () => {
               href="#"
               className="bg-slate-600 hover:bg-slate-700 px-4 py-2 rounded-lg font-medium"
             >
-              Mulai Menjelajah
+              Donwload CV <i className="fa-solid fa-download"></i>
             </a>
-            {SOCIAL_LINKS.map((item, index) => (
-              <a key={index} href={item.path} target="_blank" className="">
-                <i className={item.icon}></i>
-              </a>
-            ))}
+            <a
+              href="#"
+              className="bg-slate-600 hover:bg-slate-700 px-4 py-2 rounded-lg font-medium"
+            >
+              Mulai Menjelajah <i className="fa-solid fa-arrow-down"></i>
+            </a>
           </div>
         </div>
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="lg:w-[360px] lg:h-[450px] rounded-3xl overflow-hidden bg-white shadow-xl md:w-[300px] md:h-[400px] w-[250px] h-[350px]">
             <img
-              src="/public/hero_profile.png"
+              src="/hero_profile.png"
               className="w-full h-full  object-cover"
               alt="Foto Profil"
             />
