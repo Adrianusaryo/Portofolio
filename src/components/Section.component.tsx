@@ -1,9 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Section = (props: any) => {
-  const { children, className } = props;
+  const { children, className, id } = props;
 
   return (
-    <section className={`px-7 lg:px-16 mb-8  ${className}`}>{children}</section>
+    <section id={id} className={`px-7 lg:px-16 mb-8 min-h-fit  ${className}`}>
+      {children}
+    </section>
   );
 };
 

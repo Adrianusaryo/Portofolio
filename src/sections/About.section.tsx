@@ -3,9 +3,12 @@ import { TOOLS } from "../constants/tools";
 
 const AboutSection = () => {
   return (
-    <Section height="min-h-fit">
+    <Section id="about" className="scroll-mt-20">
+      <h2 className="text-center text-2xl font-extrabold mb-8">
+        Profil Singkat
+      </h2>
       <div className="p-5 mx-auto max-w-3xl bg-gray-800 border-2 border-slate-500 shadow-xl rounded-2xl mb-10">
-        <p className="font-medium leading-relaxed text-justify text-sm  text-gray-300">
+        <p className="font-medium leading-relaxed text-justify text-xs md:text-sm  text-gray-300">
           Saya Adrianus Aryo, seorang Fresh Graduate jurusan Computer Science
           Universitas Bina Nusantara. Full Stack Web Developer dengan pengalaman
           magang selama 1 tahun di Kementerian Perdagangan. Saya terbiasa
@@ -16,10 +19,10 @@ const AboutSection = () => {
           digunakan.
         </p>
       </div>
-      <h2 className="text-xl font-extrabold py-4 text-left ">
+      <h2 className="text-xl font-extrabold py-4 md:text-left text-center">
         Tools yang digunakan
       </h2>
-      <p className="max-w-lg mb-8 text-left  font-medium text-sm text-gray-300">
+      <p className="max-w-lg mb-8 md:text-left text-center  font-medium text-sm text-gray-300">
         Berbagai teknologi yang saya gunakan dalam pengembangan aplikasi, mulai
         dari pembuatan antarmuka hingga pengelolaan backend, untuk menciptakan
         solusi yang efektif dan responsif.

@@ -4,7 +4,7 @@ import { SOCIAL_LINKS } from "../constants/socialLinks";
 
 const ContactSection = () => {
   return (
-    <Section>
+    <Section id="contact" className="scroll-mt-20">
       <div className="flex flex-col lg:flex-row items-center justify-center mt-16 gap-10">
         {/* LEFT CONTENT */}
         <div className="w-full max-w-lg space-y-4">
@@ -26,7 +26,7 @@ const ContactSection = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <i className="fa-solid fa-paper-plane  text-xl"></i>
+              <i className="fa-solid fa-envelope  text-xl"></i>
               <span className="text-gray-200 text-sm">
                 adrianusaryo710@gmail.com
               </span>

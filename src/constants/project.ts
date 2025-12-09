@@ -8,7 +8,7 @@ export interface IProject {
 
 export const PROJECTS: IProject[] = [
   {
-    image: "",
+    image: "/image/PMSE.png",
     name: "Sistem Pengawasan PMSE",
     tools: [
       "HTML",
@@ -26,7 +26,7 @@ export const PROJECTS: IProject[] = [
     path: "https://simpktn.kemendag.go.id/pmse/#informasi",
   },
   {
-    image: "",
+    image: "/image/Nusantara.png",
     name: "Nusantara",
     tools: [
       "HTML",
@@ -42,7 +42,7 @@ export const PROJECTS: IProject[] = [
     ],
     description:
       "Nusantara adalah platform pemesanan makanan berbasis website yang terhubung Midtrans untuk pembayaran aman, mendukung pesanan dine-in dan delivery.",
-    path: "",
+    path: "#",
   },
   {
     image: "",
@@ -61,6 +61,6 @@ export const PROJECTS: IProject[] = [
     ],
     description:
       "E-Library MBK adalah platform berbasis website yang menyediakan layanan peminjaman buku serta fitur pengiriman cerpen dari pengguna, sehingga memudahkan akses literasi dan partisipasi kreatif.",
-    path: "",
+    path: "https://github.com/Adrianusaryo/laravel-library",
   },
 ];

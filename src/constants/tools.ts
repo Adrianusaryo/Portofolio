@@ -7,98 +7,98 @@ export interface ITools {
 export const TOOLS: ITools[] = [
   // Tools
   {
-    image: "/vscode.png",
+    image: "/image/vscode.png",
     name: "VS Code",
     desc: "Code Editor",
   },
   {
-    image: "/figma.png",
+    image: "/image/figma.png",
     name: "Figma",
     desc: "Design Tools",
   },
   {
-    image: "/github.png",
-    name: "GitHub",
+    image: "/image/git.png",
+    name: "Git",
     desc: "Version Control",
   },
 
   // Frontend
   {
-    image: "/html.png",
+    image: "/image/html.png",
     name: "HTML",
     desc: "Markup Language",
   },
   {
-    image: "/css.png",
+    image: "/image/css.png",
     name: "CSS",
     desc: "Styling Language",
   },
   {
-    image: "/js.png",
+    image: "/image/js.png",
     name: "JavaScript",
     desc: "Programming Language",
   },
   {
-    image: "/tailwind.png",
+    image: "/image/tailwind.png",
     name: "TailwindCSS",
     desc: "Framework",
   },
   {
-    image: "/bootstrap.png",
+    image: "/image/bootstrap.png",
     name: "Bootstrap",
     desc: "Framework",
   },
   {
-    image: "/react.png",
+    image: "/image/react.png",
     name: "React.js",
     desc: "Framework",
   },
   {
-    image: "/vue.png",
+    image: "/image/vue.png",
     name: "Vue.js",
     desc: "Framework",
   },
   {
-    image: "/next.png",
+    image: "/image/next.png",
     name: "Next.js",
     desc: "Framework",
   },
 
   // Backend
   {
-    image: "/php.png",
+    image: "/image/php.png",
     name: "PHP",
     desc: "Programming Language",
   },
   {
-    image: "/node.png",
+    image: "/image/node.png",
     name: "Node.js",
     desc: "Runtime",
   },
   {
-    image: "/Express.png",
+    image: "/image/Express.png",
     name: "Express.js",
     desc: "Framework",
   },
   {
-    image: "/ci.png",
+    image: "/image/ci.png",
     name: "CodeIgniter",
     desc: "Framework",
   },
   {
-    image: "/laravel.png",
+    image: "/image/laravel.png",
     name: "Laravel",
     desc: "Framework",
   },
 
   // Database
   {
-    image: "/mongo.png",
+    image: "/image/mongo.png",
     name: "MongoDB",
     desc: "Database",
   },
   {
-    image: "/mysql.png",
+    image: "/image/mysql.png",
     name: "MySQL",
     desc: "Database",
   },

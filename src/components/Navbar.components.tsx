@@ -1,6 +1,24 @@
+import { useEffect, useState } from "react";
+import { Menu } from "../constants/menu";
+
 const Navbar = () => {
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsFixed(window.scrollY > 1);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div
+      className={`navbar fixed top-0 left-0 right-0 shadow-sm z-50
+    transition-all duration-300 ease-in-out ${
+      isFixed ? "bg-base-100 shadow-md" : "bg-transparent "
+    }`}
+    >
       {/* LEFT DESKTOP ONLY */}
       <div className="navbar-start hidden lg:flex">
         <a className="text-xl font-bold px-7">Portofolio</a>
@@ -9,18 +27,11 @@ const Navbar = () => {
       {/* CENTER DESKTOP */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Beranda</a>
-          </li>
-          <li>
-            <a>Tentang</a>
-          </li>
-          <li>
-            <a>Proyek</a>
-          </li>
-          <li>
-            <a>Kontak</a>
-          </li>
+          {Menu.map((item, index) => (
+            <li key={index}>
+              <a href={item.href}>{item.menu}</a>
+            </li>
+          ))}
         </ul>
       </div>
 
@@ -48,18 +59,13 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow "
           >
-            <li>
-              <a className="text-">Beranda</a>
-            </li>
-            <li>
-              <a className="text-">Profil</a>
-            </li>
-            <li>
-              <a className="text-">Proyek</a>
-            </li>
-            <li>
-              <a className="text-">Kontak</a>
-            </li>
+            {Menu.map((item, index) => (
+              <li key={index}>
+                <a className="text-" href={item.href}>
+                  {item.menu}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

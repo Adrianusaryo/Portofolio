@@ -3,11 +3,11 @@ import { PROJECTS } from "../constants/project";
 
 const ProjectSection = () => {
   return (
-    <Section>
-      <h2 className="text-xl font-extrabold py-4 text-left ">
+    <Section id="project" className="scroll-mt-20">
+      <h2 className="text-xl font-extrabold py-4 md:text-left text-center ">
         Project yang dikerjakan
       </h2>
-      <p className="max-w-lg mb-8 text-left font-medium text-sm text-gray-300">
+      <p className="max-w-lg mb-8 md:text-left text-center font-medium text-sm text-gray-300">
         Beberapa project yang pernah saya kerjakan, mencakup pengembangan
         aplikasi web dan berbagai solusi digital.
       </p>
@@ -18,11 +18,11 @@ const ProjectSection = () => {
             key={index}
           >
             <div className="card lg:w-[350px] w-[330px]  h-full border-2 border-slate-500 ">
-              <figure className="mx-4 mt-4">
+              <figure className="mx-4 my-5">
                 <img
                   src={items.image}
                   alt={items.name}
-                  className="object-cover w-full h-40"
+                  className="object-cover w-full"
                 />
               </figure>
 
